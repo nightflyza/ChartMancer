@@ -9,7 +9,8 @@
  * 
  * @package ChartMancer
  * @author Rostyslav Haitkulov <info@ubilling.net.ua>
- * @see  https://github.com/nightflyza/ChartMancer
+ * @see https://github.com/nightflyza/ChartMancer
+ * @license MIT
  */
 class ChartMancer {
 
