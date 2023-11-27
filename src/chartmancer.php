@@ -1,6 +1,6 @@
 <?php
 
-namespace ChartMancer;
+namespace chartmancer\chartmancer;
 
 
 /**

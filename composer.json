@@ -17,7 +17,7 @@
 
     "autoload": {
         "psr-4": {
-            "ChartMancer\\": "src/"
+            "chartmancer\\chartmancer\\": "src"
         }
     },
 
