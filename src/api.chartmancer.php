@@ -1,8 +1,5 @@
 <?php
 
-namespace chartmancer\chartmancer;
-
-
 /**
  * The ChartMancer class automates the generation of graphs based on data provided in an array. 
  * It utilizes the GD library to create visually appealing charts, allowing developers to easily 
@@ -146,7 +143,7 @@ class ChartMancer {
      * 
      * @var string
      */
-    protected $font = 'skins/OpenSans-Regular.ttf';
+    protected $font = 'assets/OpenSans-Regular.ttf';
 
     /**
      * Font size in pt.
