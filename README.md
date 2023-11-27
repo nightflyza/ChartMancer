@@ -33,6 +33,28 @@ $cm->renderChart($data);
 
 ```
 
+![basic0](https://github.com/nightflyza/ChartMancer/assets/1496954/d6ff2530-3876-40b4-aefe-cb3676a343b9)
+
+### Nested data example
+
+```php
+
+    $data = array();
+    for ($i = 0; $i <= 249; $i++) {
+        $data[$i] = array(rand(0, 129), rand(0, 79), rand(0, 54), rand(0, 4));
+    }
+
+$cm=new ChartMancer();
+$cm->renderChart($data);
+
+```
+
+![basic1](https://github.com/nightflyza/ChartMancer/assets/1496954/f8e0a742-ecfd-4037-94f4-fd707792697d)
+
+### Acid trip example
+
+![basic3](https://github.com/nightflyza/ChartMancer/assets/1496954/5275a93f-03e4-4895-b29f-e39927a74e5d)
+
 ## Installation with [composer](https://getcomposer.org)
 
 The recommended method of installing this library is via [Composer](https://packagist.org/packages/chartmancer/chartmancer)
