@@ -18,7 +18,11 @@
     "autoload": {
         "psr-4": {
             "chartmancer\\": "src"
-        }
+        },
+
+       "files": [
+        "src/api.chartmancer.php"
+       ]
     },
 
     "authors": [
