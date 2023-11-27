@@ -3,6 +3,7 @@
     "description": "Automates the generation of graphs based on dataset provided in an array",
     "type": "library",
     "license": "MIT",
+
     "keywords": [
         "chart",
         "graph"
@@ -16,9 +17,10 @@
 
     "autoload": {
         "psr-4": {
-            "ChartMancer\\ChartMancer\\": "src/"
+            "ChartMancer\\": "src/"
         }
     },
+
     "authors": [
         {
             "name": "Rostyslav Haitkulov",
@@ -26,5 +28,6 @@
             "homepage": "https://github.com/nightflyza"
         }
     ],
+
     "minimum-stability": "dev"
 }
