@@ -10,6 +10,7 @@ for data representation in PHP applications.
 ## Description
 
 - Generates bar charts based on simple array datasets
+- Automatically adjusts chart properties to fit data
 - Outputs charts into browser or saves into files
 - Easy customizable
 
