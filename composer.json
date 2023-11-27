@@ -1,12 +1,24 @@
 {
     "name": "chartmancer/chartmancer",
     "description": "Automates the generation of graphs based on dataset provided in an array",
+    "type": "library",
     "license": "MIT",
     "keywords": [
         "chart",
         "graph"
     ],
     
+    "require": {
+        "php": ">=5.3.28",
+        "ext-gd": "*",
+        "ext-mbstring": "*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "ChartMancer\\ChartMancer\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Rostyslav Haitkulov",
@@ -14,24 +26,5 @@
             "homepage": "https://github.com/nightflyza"
         }
     ],
-    
-    "homepage": "https://github.com/nightflyza/ChartMancer",
-    "require": {
-        "php": ">=5.3.28",
-        "ext-mbstring": "*",
-        "ext-gd": "*"
-        
-    },
-    
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "autoload": {
-        "psr-4": {
-            "ChartMancer\\": "src/"
-        }
-    },
-    
-    "config": {
-        "preferred-install": "dist"
-    }
+    "minimum-stability": "dev"
 }

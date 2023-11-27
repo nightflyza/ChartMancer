@@ -1,5 +1,8 @@
 <?php
 
+namespace ChartMancer;
+
+
 /**
  * The ChartMancer class automates the generation of graphs based on data provided in an array. 
  * It utilizes the GD library to create visually appealing charts, allowing developers to easily 
