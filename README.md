@@ -33,12 +33,14 @@ $cm->renderChart($data);
 
 ```
 
-## Installation
+## Installation with [composer](https://getcomposer.org)
 
-The recommended method of installing this library is via Composer: (https://packagist.org/packages/chartmancer/chartmancer)
+The recommended method of installing this library is via [Composer](https://packagist.org/packages/chartmancer/chartmancer)
+
+### Terminal
 
 ```bash
-$ composer require chartmancer/chartmancer
+composer require chartmancer/chartmancer
 ```
 
 
