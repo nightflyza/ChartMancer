@@ -2,7 +2,6 @@
 
 require_once 'bootstrap.php';
 
-
 //random data as X=>array of nested Y
 $data = array();
 for ($i = 0; $i <= 288; $i++) {
