@@ -461,6 +461,7 @@ class ChartMancer {
 // Setting yMaxValue depend of data values
         if ($dataMax) {
             $yMaxValue = round($dataMax + ($dataMax * 0.3));
+	    $yMaxValue=($yMaxValue!=0) ? $yMaxValue : 2; //preventing division by zero
         }
 
 // Distance between grid lines on y-axis
