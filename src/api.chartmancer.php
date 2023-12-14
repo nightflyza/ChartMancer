@@ -622,8 +622,8 @@ class ChartMancer {
                 if (!empty($zBuffer)) {
                     krsort($zBuffer);
                     foreach ($zBuffer as $subValue => $rParams) {
-                        if ($subVal>0) {
-                        imagefilledrectangle($chart, $rParams['x1'], $rParams['y1'], $rParams['x2'], $rParams['y2'], $customColors[$rParams['colorIdx']]);
+                        if ($rParams['value'] > 0) {
+                            imagefilledrectangle($chart, $rParams['x1'], $rParams['y1'], $rParams['x2'], $rParams['y2'], $customColors[$rParams['colorIdx']]);
                         }
                     }
                 }
