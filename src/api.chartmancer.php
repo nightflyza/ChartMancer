@@ -655,15 +655,16 @@ class ChartMancer {
             $labelY = (int) $labelY;
 
 // Skipping some labels display?
-            $labelText = (((mb_strlen($key, 'UTF-8') > $this->xLabelLen)) ) ? mb_substr($key, 0, $this->xLabelLen, 'utf-8') . '...' : $key;
             $index++;
             if ($dataSize > 10) {
                 $labelIterator = (int) ($dataSize / $xAxisLabelCount);
                 $labelIterator = ($labelIterator == 0) ? 1 : $labelIterator; //prevents mod by zero
                 if (($index) % $labelIterator == 0) {
+                    $labelText = (((mb_strlen($key, 'UTF-8') > $this->xLabelLen)) ) ? mb_substr($key, 0, $this->xLabelLen, 'utf-8') . '...' : $key;
                     imagettftext($chart, $this->fontSize, 0, $labelX, $labelY, $labelColor, $this->font, $labelText);
                 }
             } else {
+                $labelText = (((mb_strlen($key, 'UTF-8') > $this->xLabelLen)) ) ? mb_substr($key, 0, $this->xLabelLen, 'utf-8') . '...' : $key;
                 imagettftext($chart, $this->fontSize, 0, $labelX, $labelY, $labelColor, $this->font, $labelText);
             }
 
