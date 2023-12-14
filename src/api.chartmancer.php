@@ -169,8 +169,15 @@ class ChartMancer {
     /**
      * Render maximum dataset value on chart?
      * 
+     * @var bool
      */
     protected $displayPeakValue = false;
+    
+    /**
+     * 
+     * @var string
+     */
+    protected $yAxisName='';
 
     /**
      * Rendering debug flag
