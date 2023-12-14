@@ -1,3 +1,5 @@
+![cmlogo](https://github.com/nightflyza/ChartMancer/assets/1496954/b3c281c0-c5a5-4c15-8481-a06a7b8393c8)
+
 # ChartMancer
 
 ChartMancer class automates the generation of graphs based on data provided in an array. 
