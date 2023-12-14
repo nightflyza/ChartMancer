@@ -606,9 +606,9 @@ class ChartMancer {
                     $y1 = (int) $y1;
                     $x2 = (int) $x2;
                     $y2 = (int) $y2;
-                    $rValue='_'.$subVal;
+                    $rValue = '_' . $subVal;
                     $zBuffer[$rValue] = array(
-                        'value'=>$subVal,
+                        'value' => $subVal,
                         'x1' => $x1,
                         'y1' => $y1,
                         'x2' => $x2,
@@ -622,7 +622,9 @@ class ChartMancer {
                 if (!empty($zBuffer)) {
                     krsort($zBuffer);
                     foreach ($zBuffer as $subValue => $rParams) {
+                        if ($subVal>0) {
                         imagefilledrectangle($chart, $rParams['x1'], $rParams['y1'], $rParams['x2'], $rParams['y2'], $customColors[$rParams['colorIdx']]);
+                        }
                     }
                 }
             } else {
@@ -637,8 +639,9 @@ class ChartMancer {
                 $y1 = (int) $y1;
                 $x2 = (int) $x2;
                 $y2 = (int) $y2;
-
-                imagefilledrectangle($chart, $x1, $y1, $x2, $y2, $customColors[0]);
+                if ($value > 0) {
+                    imagefilledrectangle($chart, $x1, $y1, $x2, $y2, $customColors[0]);
+                }
             }
 
 // Draw the label
@@ -670,19 +673,19 @@ class ChartMancer {
 // Optional chart chartTitle?
         if ($this->chartTitle) {
             $titleX = ($this->imageWidth - $this->gridLeft) / 2.3;
-            imagettftext($chart, $this->fontSize + 8, 0,(int) $titleX, 24, $labelColor, $this->font, $this->chartTitle);
+            imagettftext($chart, $this->fontSize + 8, 0, (int) $titleX, 24, $labelColor, $this->font, $this->chartTitle);
         }
 // Rendering custom Y-axis label
         if ($this->yAxisName) {
-            $yAxisX = $this->gridLeft-40;
-            $yAxisY = (int) $this->gridTop-10;
+            $yAxisX = $this->gridLeft - 40;
+            $yAxisY = (int) $this->gridTop - 10;
             imagettftext($chart, $this->fontSize, 0, $yAxisX, $yAxisY, $labelColor, $this->font, $this->yAxisName);
         }
 // Rendering of data set peak value?
         if ($this->displayPeakValue) {
-            $peakX = (int) ($this->imageWidth - $this->gridLeft)-150;
+            $peakX = (int) ($this->imageWidth - $this->gridLeft) - 150;
             $peakY = (int) $this->imageHeight - ($this->fontSize * 0.5);
-            $peakLabel = ($this->yAxisName) ? round($dataMax,3) . ' ' . $this->yAxisName : round($dataMax,3);
+            $peakLabel = ($this->yAxisName) ? round($dataMax, 3) . ' ' . $this->yAxisName : round($dataMax, 3);
             imagettftext($chart, $this->fontSize, 0, $peakX, $peakY, $labelColor, $this->font, 'Max: ' . $peakLabel);
         }
 // Rendering chart legend
