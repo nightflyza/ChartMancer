@@ -172,12 +172,13 @@ class ChartMancer {
      * @var bool
      */
     protected $displayPeakValue = false;
-    
+
     /**
+     * Contains custom Y-axis label
      * 
      * @var string
      */
-    protected $yAxisName='';
+    protected $yAxisName = '';
 
     /**
      * Rendering debug flag
@@ -427,6 +428,17 @@ class ChartMancer {
     }
 
     /**
+     * Sets custom Y-axis name
+     * 
+     * @param string $yAxisName
+     * 
+     * @return void
+     */
+    public function setChartYaxisName($yAxisName) {
+        $this->yAxisName = $yAxisName;
+    }
+
+    /**
      * Renders chart as PNG image into browser or into specified file
      * 
      * @param array $data
@@ -603,7 +615,7 @@ class ChartMancer {
                         'y2' => $y2,
                         'colorIdx' => $i
                     );
-                    
+
                     $i++;
                 }
 
@@ -660,11 +672,18 @@ class ChartMancer {
             $titleX = (int) ($this->imageWidth - $this->gridLeft) / 2.3;
             imagettftext($chart, $this->fontSize + 8, 0, $titleX, 24, $labelColor, $this->font, $this->chartTitle);
         }
+// Rendering custom Y-axis label
+        if ($this->yAxisName) {
+            $yAxisX = $labelWidth + $this->labelMargin;
+            $yAxisY = (int) $this->gridTop-10;
+            imagettftext($chart, $this->fontSize, 0, $yAxisX, $yAxisY, $labelColor, $this->font, $this->yAxisName);
+        }
 // Rendering of data set peak value?
         if ($this->displayPeakValue) {
             $peakX = (int) ($this->imageWidth - $this->gridLeft) / 2;
             $peakY = (int) $this->imageHeight - ($this->fontSize * 0.5);
-            imagettftext($chart, $this->fontSize, 0, $peakX, $peakY, $labelColor, $this->font, 'Max: ' . $dataMax);
+            $peakLabel = ($this->yAxisName) ? $dataMax . ' ' . $this->yAxisName : $dataMax;
+            imagettftext($chart, $this->fontSize, 0, $peakX, $peakY, $labelColor, $this->font, 'Max: ' . $peakLabel);
         }
 // Rendering chart legend
         if (!empty($this->chartLegend)) {
