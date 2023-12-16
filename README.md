@@ -1,4 +1,4 @@
-![cmlogo](https://github.com/nightflyza/ChartMancer/assets/1496954/b3c281c0-c5a5-4c15-8481-a06a7b8393c8)
+![cmlogo_transp](https://github.com/nightflyza/ChartMancer/assets/1496954/7dffd749-f232-4cd5-acb7-0cbd47903ab3)
 
 # ChartMancer
 
