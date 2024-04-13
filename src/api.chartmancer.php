@@ -220,7 +220,7 @@ class ChartMancer {
      *
      * @var float
      */
-    protected $yMaxValueRatio=0.1;
+    protected $yMaxValueRatio = 0.1;
 
     public function __construct() {
         //what are you expecting to see here?
@@ -520,7 +520,7 @@ class ChartMancer {
      * @return void
      */
     public function setYMaxValueRatio($ratio) {
-        $this->yMaxValueRatio=$ratio;
+        $this->yMaxValueRatio = $ratio;
     }
 
     /**
@@ -686,7 +686,7 @@ class ChartMancer {
 
         $barSpacing = $gridWidth / $dataSize;
         //that 4px avoids round overflow issues with grid on large datasets
-        $itemX = $this->gridLeft + $barSpacing / 2+4; 
+        $itemX = $this->gridLeft + $barSpacing / 2 + 4;
         $index = 0;
 
         //invisible bars control
@@ -846,6 +846,7 @@ class ChartMancer {
             $totaltime = $mtime[0] + $mtime[1] - $starttime;
             $debugX = $this->imageWidth - 150;
             $totalBars = $drawCalls + $drawSkip;
+            $totalBars = ($totalBars != 0) ? $totalBars : 1;
             $skipPercent = round((($drawCalls / $totalBars) * 100), 2);
             imagettftext($chart, 8, 0, $debugX, 10, $labelColor, $this->font, 'DS: ' . $dataSize . ' items');
             imagettftext($chart, 8, 0, $debugX, 22, $labelColor, $this->font, 'DC: ' . $drawCalls . ' bars (' . $skipPercent . '%)');
