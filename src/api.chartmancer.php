@@ -222,6 +222,13 @@ class ChartMancer {
      */
     protected $yMaxValueRatio = 0.1;
 
+    /**
+     * Prevents first (totals) data column from marking as already drawn
+     *
+     * @var bool
+     */
+    protected $drawFirstColumnAlways = true;
+
     public function __construct() {
         //what are you expecting to see here?
     }
@@ -524,6 +531,16 @@ class ChartMancer {
     }
 
     /**
+     * Sets the state of drawing the explict first (totals) column flag.
+     *
+     * @param bool $state The state to set for drawing the first column.
+     * @return void
+     */
+    public function setDrawFirstColumn($state) {
+        $this->drawFirstColumnAlways = $state;
+    }
+
+    /**
      * Renders chart as PNG image into browser or into specified file
      * 
      * @param array $data chart dataset
@@ -722,7 +739,16 @@ class ChartMancer {
                             'y2' => $y2,
                             'colorIdx' => $i
                         );
-                        $renderedBars[$x1 . '|' . $y1 . '|' . $x2 . '|' . $y2] = '1';
+
+                        //thats prevents overdraw folloving values with first (totals) column
+                        if ($this->drawFirstColumnAlways) {
+                            if ($i != 0) {
+                                $renderedBars[$x1 . '|' . $y1 . '|' . $x2 . '|' . $y2] = '1';
+                            }
+                        } else {
+                            //just set bar as rendered in some area
+                            $renderedBars[$x1 . '|' . $y1 . '|' . $x2 . '|' . $y2] = '1';
+                        }
                     } else {
                         $drawSkip++;
                     }
