@@ -55,11 +55,39 @@ $cm->renderChart($data);
 
 ![basic1](https://github.com/nightflyza/ChartMancer/assets/1496954/f8e0a742-ecfd-4037-94f4-fd707792697d)
 
+### Large dataset with custom palette
+
+```php
+$legend=array('Total','Disk 1','Disk 2','Disk 3','Disk 4','Disk 5','Disk 6');
+$chartMancer->setDebug(true);
+$chartMancer->setDrawFirstColumn(true);
+$chartMancer->setChartLegend($legend);
+$chartMancer->setPalette('0-M-G!!!');
+$chartMancer->setChartTitle('Disks IO');
+$chartMancer->setChartYaxisName('w/s');
+
+$chartMancer->renderChart($data);
+```
+
+![cmdio](https://github.com/user-attachments/assets/db60757e-ec5b-410b-8814-8e10e77887cb)
+
 ### Acid trip example
 
 ![basic3](https://github.com/nightflyza/ChartMancer/assets/1496954/5275a93f-03e4-4895-b29f-e39927a74e5d)
 
-## Installation with [composer](https://getcomposer.org)
+
+### Practical usage examples
+
+![of1](https://github.com/user-attachments/assets/50dd0afb-0a42-498a-90b0-b32b81d247dd)
+![of2](https://github.com/user-attachments/assets/9e755adb-ca1b-4e68-8e87-d35c68646eaa)
+![of3](https://github.com/user-attachments/assets/147de90b-0ef4-409e-ac22-7e4088bbe458)
+
+
+## Full class description
+
+[can be found here](https://ubilling.net.ua/api_doc/classes/ChartMancer.xhtml)
+
+## Installation
 
 The recommended method of installing this library is via [Composer](https://packagist.org/packages/chartmancer/chartmancer)
 
@@ -68,7 +96,6 @@ The recommended method of installing this library is via [Composer](https://pack
 ```bash
 composer require chartmancer/chartmancer
 ```
-
 
 ## License
 
