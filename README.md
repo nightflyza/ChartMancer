@@ -79,7 +79,9 @@ $chartMancer->renderChart($data);
 ### Practical usage examples
 
 ![of1](https://github.com/user-attachments/assets/50dd0afb-0a42-498a-90b0-b32b81d247dd)
+
 ![of2](https://github.com/user-attachments/assets/9e755adb-ca1b-4e68-8e87-d35c68646eaa)
+
 ![of3](https://github.com/user-attachments/assets/147de90b-0ef4-409e-ac22-7e4088bbe458)
 
 
