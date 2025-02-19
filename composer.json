@@ -6,7 +6,9 @@
 
     "keywords": [
         "chart",
-        "graph"
+        "graph",
+	"bar-chart",
+	"charts"
     ],
     
     "require": {
