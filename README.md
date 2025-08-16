@@ -75,6 +75,26 @@ $chartMancer->renderChart($data);
 
 ![basic3](https://github.com/nightflyza/ChartMancer/assets/1496954/5275a93f-03e4-4895-b29f-e39927a74e5d)
 
+### Basic pie chart
+
+```php
+$chartMancer->setDebug(true);
+$chartMancer->setImageWidth(600);
+$chartMancer->setImageHeight(600);
+$chartMancer->setChartTitle('Sales 2024');
+$chartMancer->setChartLegend(array('Nissan', 'Toyota', 'Jeep'));
+$chartMancer->setPiePercent(true);
+
+$data = array(
+    'Toyota' => 10.8,
+    'Nissan' => 3.35,
+    'Jeep' => 1.01,
+);
+
+$chartMancer->renderPie($data);
+```
+
+![pie0](https://github.com/user-attachments/assets/719f3bf2-dd5a-4279-8d2d-f67a8599f5e6)
 
 ### Practical usage examples
 

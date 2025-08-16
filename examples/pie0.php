@@ -14,7 +14,7 @@ $chartMancer->setChartTitle('Sales 2024');
 //renders custom legend
 $chartMancer->setChartLegend(array('Nissan', 'Toyota', 'Jeep'));
 //shows percentage values instead of exact values in pie labels
-$chartMancer->setPiePercent(true); 
+$chartMancer->setPiePercent(true);
 
 //brand sales data in millions
 $data = array(

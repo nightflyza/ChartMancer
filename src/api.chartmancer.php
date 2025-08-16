@@ -1044,7 +1044,7 @@ class ChartMancer {
             if ($value > 0) {
                 $angle = ($value / $totalValue) * 360;
                 $endAngle = $currentAngle + $angle;
-                
+
                 $sectorInfo[] = array(
                     'key' => $key,
                     'value' => $value,
@@ -1053,7 +1053,7 @@ class ChartMancer {
                     'centerAngle' => $currentAngle + ($angle / 2),
                     'colorIndex' => $index % count($customColors)
                 );
-                
+
                 $currentAngle = $endAngle;
             }
             $index++;
@@ -1073,7 +1073,7 @@ class ChartMancer {
             } else {
                 $labelText = $sector['key'] . ' (' . $sector['value'] . ')';
             }
-            
+
             if (mb_strlen($labelText, 'UTF-8') > $this->pieLabelLen + 5) {
                 $labelText = mb_substr($sector['key'], 0, $this->pieLabelLen, 'utf-8') . $this->cutSuffix;
             }
