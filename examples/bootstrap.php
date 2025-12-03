@@ -1,17 +1,6 @@
 <?php
 
-if (file_exists('vendor/autoload.php')) {
-  require_once 'vendor/autoload.php';
-} else {
-  require_once '../vendor/autoload.php';
-}
-
-
+require_once __DIR__ . '/../src/api.chartmancer.php';
 $chartMancer = new ChartMancer();
-
-if (file_exists('assets/OpenSans-Regular.ttf')) {
- $chartMancer->setFont('assets/OpenSans-Regular.ttf');
-} else {
- $chartMancer->setFont('../assets/OpenSans-Regular.ttf');
-}
+$chartMancer->setFont(__DIR__ . '/../assets/OpenSans-Regular.ttf');
 
