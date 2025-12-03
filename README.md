@@ -19,7 +19,7 @@ for data representation in PHP applications.
 
 ## Requirements
 
-- PHP >=5.3 (PHP 7.4, 8.2, 8.3, 8.4 is also compatible)
+- PHP >=5.3 (PHP 7.4, 8.2, 8.3, 8.4, 8.5 is also compatible)
 - GD Library
 - Mbstring extension
 
