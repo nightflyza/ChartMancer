@@ -1175,7 +1175,7 @@ class ChartMancer {
             imagesavealpha($image, true);
             $result = imagepng($image, null, $quality);
             if (phpversion() < '8.0.0') {
-                imagedestroy($chart);
+                imagedestroy($image);
             }
             $imageBody = ob_get_contents();
             ob_end_clean();
