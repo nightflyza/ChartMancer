@@ -15,11 +15,11 @@ for data representation in PHP applications.
 - Generates bar charts based on simple array datasets
 - Automatically adjusts chart properties to fit data
 - Outputs charts into browser or saves into files
-- Easy customizable
+- Easily customizable
 
 ## Requirements
 
-- PHP >=5.3 (PHP 7.4, 8.2, 8.3, 8.4, 8.5 is also compatible)
+- PHP >=5.3 (yes PHP 7.4-8.5 are also compatible)
 - GD Library
 - Mbstring extension
 
@@ -104,6 +104,9 @@ $chartMancer->renderPie($data);
 
 ![of3](https://github.com/user-attachments/assets/147de90b-0ef4-409e-ac22-7e4088bbe458)
 
+![of4](https://github.com/user-attachments/assets/18a1f53b-6e12-4e0e-b930-3b2fef26cef9)
+
+![of5](https://github.com/user-attachments/assets/6fe6997b-6d2a-4b5a-b98b-d6f32339ac2b)
 
 ## Full class description
 
