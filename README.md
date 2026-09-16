@@ -8,6 +8,11 @@ visualize and display data trends. With ChartMancer, you can customize various a
 graph, such as colors, labels, and other chart properties, providing a versatile tool 
 for data representation in PHP applications.
 
+![Packagist License](https://img.shields.io/packagist/l/chartmancer/chartmancer)
+![PHP compat](https://img.shields.io/badge/PHP%20-%205.3--8.5-blue?logo=php)
+![Packagist Downloads](https://img.shields.io/packagist/dt/chartmancer/chartmancer)
+![Packagist Downloads](https://img.shields.io/packagist/dm/chartmancer/chartmancer)
+![Packagist Stars](https://img.shields.io/packagist/stars/chartmancer/chartmancer)
 
 ## Description
 
